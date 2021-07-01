@@ -1,5 +1,5 @@
 const request = require("request");
-const geocode = require('./geocode')
+
 const forecast = (location, callbck) => {
     const url = `http://api.weatherstack.com/current?access_key=2fce57cf49d5b3616cfd69c3260cbce3&query=${location.latitude},${location.longitude}}`;
     request({ url: url, json: true }, (error, response) => {
