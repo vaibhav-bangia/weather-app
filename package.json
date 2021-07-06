@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/vaibhav-bangia/weather-app#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "request": "^2.88.2"
   }
 }
