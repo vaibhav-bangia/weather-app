@@ -1,2 +1,3 @@
-console.log(data.location);
-        // console.log(forecastData.cur_temp);
+if(error){
+        return console.log(error);
+    

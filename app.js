@@ -2,7 +2,7 @@ const request = require('request');
 const geocode = require('./utils/geocode.js');
 const forecast = require('./utils/forecast.js');
 
-address = 'Delhi'
+address = 'Rajouri Garden'
 geocode(address, (error, data) => {
     if(error){
         return console.log(error);
