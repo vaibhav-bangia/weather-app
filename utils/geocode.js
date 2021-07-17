@@ -20,10 +20,10 @@ const geocode = (address,callback)=>{
     })
 };
 
-geocode('Delhi',(error,data)=>{
-    console.log('Error',error)
-    console.log('Data',data);
-})
+// geocode('Delhi',(error,data)=>{
+//     console.log('Error',error)
+//     console.log('Data',data);
+// })
 
 
 

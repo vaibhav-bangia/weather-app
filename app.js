@@ -5,9 +5,14 @@ const forecast = require('./utils/forecast.js');
 const app = express()
 const port = 3000
 var x="wtf"; 
+
 app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => res.sendFile(__dirname+ '/index.html'))
+
+
 app.use(bodyParser.urlencoded({extended:true}));
+
 app.post("/",function(req,res){
     var loc = req.body.loc;
     address = loc; 
@@ -22,10 +27,11 @@ app.post("/",function(req,res){
             return console.log(error);
         }
         x = forecastData.cur_temp;
-        console.log(`it is currently ${forecastData.cur_temp} C in ${data.locaton}`)
+        console.log(`It is currently ${forecastData.cur_temp} C in ${data.locaton}`)
+        res.render("result",{temp:x,location:address})
     });
 })
-    res.render("result",{kindOfDay:x})
+    
     //res.send("HelO!");
 })
 
