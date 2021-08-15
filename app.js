@@ -18,6 +18,7 @@ app.post("/", function (req, res) {
     address = loc;
     console.log(loc)
     geocode(address, (error, data) => {
+
         if (error) {
             return console.log(error);
         }
@@ -26,12 +27,12 @@ app.post("/", function (req, res) {
             if (error) {
                 return console.log(error);
             }
-            x = forecastData.cur_temp;
+            var temp = forecastData.cur_temp;
             console.log(`It is currently ${forecastData.cur_temp} C in ${data.locaton}`)
-            res.render("result", { temp: x, location: address })
+            res.render("result", { temp: temp, location: address })
         });
     })
 
 
 })
-app.listen(port, () => console.log(`Example app listening on port port!`))
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
